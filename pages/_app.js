@@ -1,19 +1,10 @@
 import '../styles/globals.css';
-import NavBar from '../components/NavBar';
+import Layout from '../components/Layout';
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <NavBar />
+    <Layout>
       <Component {...pageProps} />
-      <span>this component is wrapped with MyApp component, which is included in next.js default</span>
-      <style jsx global>
-        {`
-          a {
-            color: white;
-          }
-        `}
-      </style>
-    </>
+    </Layout>
   );
 }
